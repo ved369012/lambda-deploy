@@ -11,4 +11,11 @@ Resources:
       Handler: index.lambda_handler
       Timeout: 60
       MemorySize: 128
+      Events:
+        HttpApi:
+          Type: HttpApi
+          Properties:
+            Path: /get-country-data
+            Method: get
+
      

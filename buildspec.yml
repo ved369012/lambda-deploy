@@ -10,4 +10,5 @@ phases:
 artifacts:
   type: zip
   files:
-    - lambda_function.zip
+    - template.yaml
+    - outputTemplate.yaml

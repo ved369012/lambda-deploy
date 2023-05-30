@@ -1,12 +1,3 @@
-# """
-# Constants File
-
-# __author__: Makarand Sawarkar
-# __License__: Acuity KP - Alexandria
-# """
-
-
-
 from pymongo import MongoClient, errors
 
 

@@ -17,17 +17,17 @@ Resources:
           Properties:
             Path: /get-country-data
             Method: get     
-  version:
-    Type: AWS::Lambda::Version
-    Properties:
-      FunctionName: !Ref MyLambdaFunction
-      Description: v1
-  alias:
-    Type: AWS::Lambda::Alias
-    Properties:
-      FunctionName: !Ref MyLambdaFunction
-      FunctionVersion: !GetAtt version.Version
-      Name: BLUE
+#   version:
+#     Type: AWS::Lambda::Version
+#     Properties:
+#       FunctionName: !Ref MyLambdaFunction
+#       Description: v1
+#   alias:
+#     Type: AWS::Lambda::Alias
+#     Properties:
+#       FunctionName: !Ref MyLambdaFunction
+#       FunctionVersion: !GetAtt version.Version
+#       Name: BLUE
        
 
      

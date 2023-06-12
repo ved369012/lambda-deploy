@@ -16,7 +16,8 @@ Resources:
           Type: HttpApi
           Properties:
             Path: /get-country-data
-            Method: get     
+            Method: get
+            
 #   version:
 #     Type: AWS::Lambda::Version
 #     Properties:

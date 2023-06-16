@@ -1,6 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-
 Resources:
   MyLambdaFunction:
     Type: AWS::Serverless::Function
@@ -16,19 +15,39 @@ Resources:
           Type: HttpApi
           Properties:
             Path: /get-country-data
-            Method: get
-            
-#   version:
-#     Type: AWS::Lambda::Version
-#     Properties:
-#       FunctionName: !Ref MyLambdaFunction
-#       Description: v1
-#   alias:
-#     Type: AWS::Lambda::Alias
-#     Properties:
-#       FunctionName: !Ref MyLambdaFunction
-#       FunctionVersion: !GetAtt version.Version
-#       Name: BLUE
-       
-
-     
+            Method: get     
+  version:
+    Type: AWS::Lambda::Version
+    Properties:
+      FunctionName: !Ref MyLambdaFunction
+      Description: v1
+  aliasQA:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref MyLambdaFunction
+      FunctionVersion: !GetAtt version.Version
+      Name: QA
+  aliasUAT:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref MyLambdaFunction
+      FunctionVersion: !GetAtt version.Version
+      Name: UAT
+  aliasdev:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref MyLambdaFunction
+      FunctionVersion: !GetAtt version.Version
+      Name: dev
+  aliastest:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref MyLambdaFunction
+      FunctionVersion: !GetAtt version.Version
+      Name: test
+  aliasProduction:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref MyLambdaFunction
+      FunctionVersion: !GetAtt version.Version
+      Name: Production
